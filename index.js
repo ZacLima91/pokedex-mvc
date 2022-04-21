@@ -1,10 +1,11 @@
 import express from "express";
 import path from "path";
+const PORT = process.env.PORT || 3000
 const server = express();
 const __dirname = path.resolve(path.dirname(""));
 server.set("view engine", "ejs");
 server.use(express.static(path.join(__dirname, "public")));
-
+server.use(express.urlencoded())
 const pokedex = [
   {
     id: 1,
@@ -72,15 +73,15 @@ server.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
-server.get("/index.ejs", (req, res) => {
+server.get("/index", (req, res) => {
   res.render("index.ejs", {pokedex});
 });
-server.get("/cadastro.ejs", (req, res) => {
-  res.render("cadastro.ejs");
+server.get("/cadastro", (req, res) => {
+  res.render("cadastro");
 });
-server.get("/detalhes/:id", (req, res) => {
+server.get("/detalhes", (req, res) => {
   res.render("detalhes.ejs");
 });
-server.listen(3000, () =>
-  console.log("Servidor rodando em http://localhost:3000")
+server.listen(PORT, () =>
+  console.log(`Servidor rodando em http://localhost:${PORT}`)
 );
