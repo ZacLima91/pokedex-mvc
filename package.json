@@ -8,7 +8,6 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node js ",
     "dev": "nodemon -e js,html,css,ejs "
   },
   "author": "Zac Lima",
