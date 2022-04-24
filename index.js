@@ -73,15 +73,21 @@ server.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
-server.get("/index", (req, res) => {
+server.get("/index.ejs", (req, res) => {
   res.render("index.ejs", {pokedex});
 });
-server.get("/cadastro", (req, res) => {
+server.get("/cadastro.ejs", (req, res) => {
   res.render("cadastro");
 });
-server.get("/detalhes", (req, res) => {
+server.get("/detalhes.ejs", (req, res) => {
   res.render("detalhes.ejs");
 });
+
+server.post('/add',(req, res)=>{
+  const pokemon = req.body
+  pokedex.push(pokemon)
+  res.redirect('/')
+})
 server.listen(PORT, () =>
   console.log(`Servidor rodando em http://localhost:${PORT}`)
 );

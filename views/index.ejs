@@ -5,25 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <header>
-      <div class="title">
-        <span id="iconeMenu"></span>
-        <span>
-          <h1>POKEDEX</h1>
-        </span>
-      </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.ejs">Início</a></li>
-          <li><a href="cadastro.ejs">Cadastro</a></li>
-          <li><a href="detalhes.ejs">Detalhes</a></li>
-        </ul>
-      </nav>
+    <header>  
+          <img id="logo" src="images/logo.gif" alt="">
+          <img id="iconeMenu" src="images/menu.png" alt="">
     </header>
+      
+  
     <main>
+      
+ 
+      <div id="barraMenu">
+        <%- include('./partials/menu.ejs') %>
+        <img src="images/pokebola.gif" alt="">
+       </div>
+    
       <section class="container">
         <div id="cards">
           <% pokedex.forEach( pokemon => { %>
@@ -33,9 +31,9 @@
               <p>Tipo: <%= pokemon.type %></p>
             </div>
           <% }) %>
-        </div>
+        </div>  
       </section>
-      <script src="script.js"></script>
+      <script src="scripts/script.js"></script>
     </main>
   </body>
 </html>

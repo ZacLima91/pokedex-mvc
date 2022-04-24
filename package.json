@@ -1,19 +1,17 @@
 {
-  "name": "projeto02-modulo02",
+  "name": "pokedex-mvc",
   "version": "1.0.0",
-  "description": "Projeto MVC de uma pokedex",
+  "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "type": "module",
   "scripts": {
-    "dev": "nodemon -e js,html,css,ejs "
+    "start": "index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "Zac Lima",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
   }
