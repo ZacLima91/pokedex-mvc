@@ -13,6 +13,11 @@ body {
   max-height: 100vh;
   background-color: aquamarine;
   display: flex;
+  background-image: url(../images/fundo.gif);
+  background-size: 100%;
+  background-size: cover;
+  overflow: auto;
+  position: absolute;
 }
 
 header {
@@ -109,25 +114,22 @@ nav#active {
 }
 
 
-
 .container {
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../images/fundo.gif);
-  background-size: 100vw;
+  width: calc(100% - 250px);
   display: flex;
   float: right;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #fff;
+  padding: 8rem 0 8rem 0;
+
 }
 
 #cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-left: 250px;
-  padding-bottom: 2rem;
+  height: auto;
 }
 
 .card {
@@ -252,12 +254,10 @@ picture img{
   display: flex;
   justify-content: center;
   padding-left: 250px;
-  height:100vh;
 }
 #cardDetalhes{
-  padding-top: 10rem;
+  padding-top: 6rem;
   text-align: center;
-  height: 50%;
 }
 
 #mobile{
@@ -317,6 +317,14 @@ a{
 }
 
 @media (max-width: 880px) {
+
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/fundo-mobile.gif);
+    background-size: 100vw 300vh;
+    background-repeat: no-repeat;
+  }
  
   section#register{
     padding-top: 0;
@@ -342,12 +350,12 @@ a{
   }
 
   .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url(../images/fundo-mobile.gif);
-    background-size: 100% 500%;
-    margin-top: 8rem;
-    margin-bottom:  auto;
+    
   }
   section.containerHistory{
     background-image: url(../images/fundo-mobile.gif);
@@ -371,17 +379,14 @@ a{
   #barraMenu #pikachu{
     width: 0;
   }
-  main {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 260 vh;
+
+  #main{
+    padding-bottom: 8rem;
   }
+
   #cards {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin-bottom: 2rem;
+    padding-top: 40rem;
+    padding-bottom: 4rem;
   }
   #cards {
     display: grid;
@@ -391,10 +396,10 @@ a{
 
 
   section#register{ 
-    height: 250vh;
+    height: 200vh;
     padding-left: 0;
     background-image: url(../images/fundo-mobile.gif);
-    background-size: 100% 400%;
+    background-size: 100% 100%;
     margin-top: 8rem
   }
 
@@ -434,6 +439,7 @@ a{
 }
 @media (max-width: 1060px) {
   #cards {
+    padding-top: 20rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -453,6 +459,8 @@ a{
   #cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 30rem;
+    padding-bottom: 4rem;
   }
   .card {
     background-color:  rgb(211, 200, 200);
@@ -472,7 +480,6 @@ a{
   header div #iconeMenu{
     width: 2rem;
     height: 2rem;
-    padding-top: 4rem;
   }
 
   header #logo{
@@ -480,6 +487,7 @@ a{
   }
 
   #cards{
+    padding-top: 20rem;
     font-size: 14px;
   }
 
