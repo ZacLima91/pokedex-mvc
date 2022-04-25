@@ -20,7 +20,7 @@ iconeMenu.addEventListener('click', function(){
     if(cont == 1){
         menu.setAttribute('id', 'active')
     }else{
-        menu.removeAttribute('id')
+        menu.setAttribute('id', 'disable')
         cont = 0
     }
     

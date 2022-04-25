@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>POKEDEX</h1>
-        <ul class="menu">
-            <li><a href="index.ejs">Início</a></li>
-            <li><a href="cadastro.ejs">Cadastro</a></li>
-            <li><a href="detalhes.ejs">Detalhes</a></li>
-        </ul>
-      </header>
-</body>
+      <div>
+        <img id="iconeMenu" src="../images/menu.png" alt="" />
+      </div>
+      <img id="logo" src="../images/logo.gif" alt="" />
+    </header>
+
+    <main>
+      <div id="barraMenu">
+        <nav class="menu" id="desktop">
+          <ul>
+            <li><a href="../index.ejs">Início</a></li>
+            <li><a href="../cadastro.ejs">Cadastro</a></li>
+            <li><a href="../history.ejs">História</a></li>
+          </ul>
+        </nav>
+        <img src="<%= pokemon.image %> " alt="" />
+      </div>
+
+      <section class="container">
+        <section id="detalhes">
+          <div id="cardDetalhes">
+            <h1><%= pokemon.name %></h1>
+            <img id="mobile" src="<%= pokemon.image %>" alt="">
+            <table border="2">
+                <tr>
+                    <td>ID:</td>
+                    <td><%= pokemon.id %></td>
+                </tr>
+                <tr>
+                    <td>Descrição:</td>
+                    <td><%= pokemon.description %></td>
+                </tr>
+                <tr>
+                    <td>Tipo:</td>
+                    <td><%= pokemon.type %></td>
+                </tr>
+                <tr>
+                    <td>Tamanho:</td>
+                    <td><%= pokemon.height %></td>
+                </tr>
+                <tr>
+                    <td>Peso:</td>
+                    <td><%= pokemon.weigth %></td>
+                </tr>
+                <tr>
+                    <td>Categoria:</td>
+                    <td><%= pokemon.category %></td>
+                </tr>
+                <tr>
+                    <td>Tipo:</td>
+                    <td><%= pokemon.type %></td>
+                </tr>
+            </table>
+          </div>
+        </section>
+      </section>
+      <script src="../scripts/script.js"></script>
+    </main>
+    <footer><%- include('./partials/footer.ejs') %></footer>
+  </body>
 </html>

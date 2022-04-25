@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
+    <title>Pokémon</title>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header>
-      <img id="logo" src="images/logo.gif" alt="">
-      <img id="iconeMenu" src="images/menu.png" alt="" />
+      <div>
+        <img id="iconeMenu" src="images/menu.png" alt="" />
+      </div>
+      <img id="logo" src="images/logo.gif" alt="" />
     </header>
     <main>
       <div id="barraMenu">
@@ -23,7 +25,8 @@
           <h2>Cadastro de pokemons</h2>
 
           <form action="/add" method="POST">
-            <label for="nome">Nome:</label>
+
+            <label for="name">Nome:</label>
             <input type="text" id="name" name="name" />
 
             <label for="type">Tipo:</label>
@@ -32,8 +35,8 @@
             <label for="image">Link da Imagem:</label>
             <input type="text" id="image" name="image" />
 
-            <label for="drescription">Descrição:</label>
-            <input type="text" id="drescription" name="drescription" />
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" name="description" />
 
             <label for="height">Altura:</label>
             <input type="number" id="height" name="height" />
@@ -44,8 +47,8 @@
             <label for="category">Categoria:</label>
             <input type="text" id="category" name="category" />
 
-            <label for="weaknesses">Fraquezas:</label>
-            <input type="text" id="weaknesses" name="weaknesses" />
+            <label for="abilities">Habilidades:</label>
+            <input type="text" id="abilities" name="abilities" />
 
             <button id="buttonRegister" type="submit">Cadastrar</button>
           </form>
@@ -53,5 +56,8 @@
       </section>
       <script src="scripts/script.js"></script>
     </main>
+    <footer>
+      <%- include('./partials/footer.ejs') %>
+    </footer>
   </body>
 </html>

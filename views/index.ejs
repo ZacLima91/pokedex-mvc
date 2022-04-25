@@ -4,36 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
+    <title>Pokémon</title>
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
-    <header>  
-          <img id="logo" src="images/logo.gif" alt="">
-          <img id="iconeMenu" src="images/menu.png" alt="">
+  <body >
+    <header>
+      <div>
+        <img id="iconeMenu" src="images/menu.png" alt="" />
+      </div>
+      <img id="logo" src="images/logo.gif" alt="" />
     </header>
-      
-  
+
     <main>
-      
- 
       <div id="barraMenu">
         <%- include('./partials/menu.ejs') %>
-        <img src="images/pokebola.gif" alt="">
-       </div>
-    
+        <img src="images/pokebola.gif" alt="" />
+      </div>
+
       <section class="container">
         <div id="cards">
           <% pokedex.forEach( pokemon => { %>
-            <div class="card">
-              <img src=" <%= pokemon.image %>" alt="" />
-              <h2 class="description"><%= pokemon.name %></h2>
-              <p>Tipo: <%= pokemon.type %></p>
-            </div>
+            <a href="detalhes/<%= pokemon.id %>">
+          <div class="card">
+            <img src=" <%= pokemon.image %>" alt="" />
+            <h2 class="description"><%= pokemon.name %></h2>
+            <p>Tipo: <%= pokemon.type %></p>
+          </div>
+        </a>
           <% }) %>
-        </div>  
+        </div>
       </section>
       <script src="scripts/script.js"></script>
     </main>
+    <footer>
+      <%- include('./partials/footer.ejs') %>
+    </footer>
   </body>
 </html>

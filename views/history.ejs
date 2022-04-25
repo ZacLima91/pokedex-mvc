@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img id="iconeMenu" src="images/menu.png" alt="" />
+      </div>
+      <img id="logo" src="images/logo.gif" alt="" />
+    </header>
+    <main>
+      <div id="barraMenu">
+        <%- include('./partials/menu.ejs') %>
+        <img src="images/pokebola.gif" alt="" />
+      </div>
+     <section class="containerHistory">
+       <div class="history">
+
+         <h1>Mundo Pokémon: o que é, sua história e como funciona</h1>
+       
+ 
+             <picture>
+               <source >
+                 <img src="images/pokémon-alimento-capa-e1559149719440-890x466.jpg" alt="">
+             </picture>
+             <p>
+              Você sabe muito bem o que é e como funciona o Mundo Pokémon? Esse universo surgiu graças à popular franquia de games criada pela Nintendo e é muito maior e complexo do que você pode imaginar. E ele voltará a estar em evidência graças a estreia de Detetive Pikachu nos cinemas.
+            </p>
+            <p>Se você não conhece muito bem o Mundo Pokémon ou quer se aprofundar no assunto, confira abaixo um guia.</p>
+
+            <h3>A Geografia do Mundo Pokémon</h3>
+            <picture>
+              <source >
+                <img src="images/Mundo-Pokémon-1.jpg" alt="">
+            </picture>
+            <p>Como muitos já sabem desde a época dos jogos da franquia, o Mundo Pokémon é dividido em regiões que são inspiradas em locais do mundo real. Kanto, Johto, Hoenn e Sinnoh são inspiradas em áreas geográficas do Japão.
+              Já Unova é inspirada em Nova York, Kalos é baseada na França, Alola é uma cópia das ilhas do Havaí e Galar, que ainda fará sua estreia na franquia, é semelhante às Ilhas Britânicas.</p>
+              <p>Em muitos casos, os Pokémons acabam afetados pelo clima e características desses locais. Isso é mais evidente da região de Alola, em que muitos Pokémons são diferentes de suas contrapartes normais.</p>
+              <p>A geografia do Mundo Pokémon foi criada após um duelo entre os lendários Groudon e Kyogre, que tentaram modificar o planeta, cada um a seu favor.</p>
+              <p>Depois, os continentes foram modificados novamente graças à interferência de Regigigas, que com sua força, criou as regiões que nós conhecemos dentro do Mundo Pokémon. Mas antes que o Pokémon causasse mais mudanças, ele foi selado pelo Regis (que, até onde se sabe, podem ter sido criados pelos humanos) na região de Sinnoh.</p>
+              <p>E muitas das cavernas existentes dentro do Mundo Pokémon foram uma obra dos Pokémon do tipo terrestre. Um bom exemplo é a caverna dos Digletts, que fica na região de Kanto.</p>
+              <h3>História</h3>
+              <picture>
+                <source >
+                  <img src="images/Mundo-Pokémon-2.jpg" alt="">
+              </picture>
+               <p>Muitos fãs acreditam que o Mundo Pokémon se trata apenas de nossa atual civilização alguns anos no futuro, por conta das tecnologias existentes. No entanto, muitos se esquecem que sua história sempre foi influenciada e afetada pelos Pokémon. </p>
+               <p>Até onde se sabe, o criador do Mundo Pokémon é o lendário Arceus. Foi ele quem criou Dialga, Palkia e Giratina para serem os guardiões do tempo, espaço e caos. Após isso, Arceus deu vida à Azelf, Uxie e Mesprit para que eles criassem a força de vontade, conhecimento e emoções, respectivamente.</p>
+               <p>Esse Pokémon citados acima podem ser considerados deuses dentro da franquia.</p>
+               <p>Além disso, existem várias cavernas e cidades antigas que revelam que os Pokémon ajudaram a formar à civilização humana. O exemplo mais famoso são as Ruínas de Alph, que dão a entender que os humanos desenvolveram suas linguagens com a ajuda das mais variadas formas dos Unowns.</p>
+               <h3>Sobre Pokémon</h3>
+               <picture>
+                <source >
+                  <img src="images/Mundo-Pokémon-3.jpg" alt="">
+              </picture>
+              <p><strong>Pokémon</strong>, a franquia, foi criada por Satoshi Tajiri em <strong>1995</strong> e o primeiro game da série, Pokémon Red e Blue, foi lançado para <strong>o Game Boy da Nintendo em 1996</strong>.</p>
+              <p>Este universo é habitado pelas criaturas de mesmo nome, que podem ser <strong>capturadas por treinadores</strong> e serem treinadas para participarem de batalhas, entre outras coisas.</p>
+              <p><strong>Vários outros games da série</strong> foram lançados desde então, como Pokémon Gold, Silver e Crystal; Ruby, Sapphire e Emerald, FireRed e LeafGreen, Diamond, Pearl e Platinum, entre outros. Cada título apresentou uma <strong>nova geração de monstrinhos</strong> para os jogadores por se passarem em continentes diferentes.</p>
+              <p>Até o momento, já foram criados <strong>898 Pokémon diferentes</strong>.</p>
+              <p>A franquia também conta com <strong>um famoso anime</strong>, protagonizado por <strong>Ash Ketchum</strong> e seu querido <strong>Pikachu</strong> (o monstrinho mais famoso da franquia), que é exibido <strong>desde 1997</strong> e já conta com mais de mil episódios. A franquia também já apareceu <strong>em filmes, jogo de cartas, mangás e jogos de tabuleiro</strong>.</p>
+              <p>Pokémon também é considerada <strong>a franquia de mídia mais bem sucedida e lucrativa da história</strong>, ao arrecadar em torno de US$ 95 bilhões desde o seu lançamento.</p>
+       </div>
+      
+     </section>
+     
+      <script src="scripts/script.js"></script>
+    </main>
+    <footer>
+      <%- include('./partials/footer.ejs') %>
+    </footer>
+  </body>
+</html>
